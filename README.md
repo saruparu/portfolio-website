@@ -1,16 +1,119 @@
-# React + Vite
+# Saravanabalaji DG - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website with an integrated AI chatbot assistant. Built with React and Vite, featuring smooth animations and a sleek dark theme.
 
-Currently, two official plugins are available:
+🌐 **Live Site:** [portfolio-c5c4d.web.app](https://portfolio-c5c4d.web.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Modern UI/UX** - Dark theme with glassmorphism effects and smooth animations
+- **AI Chatbot** - Interactive assistant that answers questions about my experience
+- **Responsive Design** - Optimized for desktop, tablet, and mobile devices
+- **Smooth Navigation** - Single-page app with smooth scroll between sections
+- **Fast Performance** - Built with Vite for optimal loading speeds
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|----------|-------------|
+| **Frontend** | React 19, Vite 7, Framer Motion |
+| **Styling** | Vanilla CSS with CSS Variables |
+| **Icons** | Lucide React, React Icons |
+| **Backend** | Google Cloud Run (Chatbot API) |
+| **Hosting** | Firebase Hosting |
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/saruparu/portfolio-website.git
+cd portfolio-website
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`
+
+### Build & Deploy
+
+```bash
+# Build for production
+npm run build
+
+# Deploy to Firebase
+firebase deploy --only hosting
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── Navbar.jsx        # Navigation with smooth scroll
+│   ├── Hero.jsx          # Profile section with photo
+│   ├── Expertise.jsx     # Skills/expertise cards
+│   ├── Experience.jsx    # Work experience timeline
+│   ├── Projects.jsx      # Portfolio projects grid
+│   ├── Footer.jsx        # Contact info & social links
+│   ├── ChatWidget.jsx    # AI chatbot interface
+│   └── ChatMessage.jsx   # Chat message component
+├── lib/
+│   └── chatService.js    # Chatbot API communication
+├── index.css             # Global styles & theming
+├── App.jsx               # Root component
+└── main.jsx              # Entry point
+```
+
+---
+
+## 📖 Documentation
+
+For detailed technical documentation including architecture diagrams and process flows, see:
+
+📄 **[DOCUMENTATION.md](./DOCUMENTATION.md)**
+
+---
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env.development` file for local development:
+
+```env
+VITE_CHATBOT_API_URL=/api
+```
+
+For production, the chatbot URL defaults to the Cloud Run backend.
+
+---
+
+## 📝 License
+
+This project is for personal portfolio use.
+
+---
+
+## 📬 Contact
+
+- **Email:** saravanda@gmail.com
+- **LinkedIn:** [linkedin.com/in/saravanabalaji-dg-50703251](https://www.linkedin.com/in/saravanabalaji-dg-50703251/)
+- **Website:** [portfolio-c5c4d.web.app](https://portfolio-c5c4d.web.app)
