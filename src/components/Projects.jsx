@@ -4,9 +4,9 @@ import { Trophy, TrendingUp, CloudLightning, DatabaseZap } from 'lucide-react';
 
 const achievements = [
     {
-        title: "30% Cost Reduction",
-        metric: "Microsoft Fabric",
-        description: "Led Microsoft Fabric migration, reducing costs by 30% while improving data processing efficiency.",
+        title: "5 Major Migrations",
+        metric: "Platform Modernization",
+        description: "Successfully led 5 enterprise migrations: Sage 500→SAP HANA, MicroStrategy→Tableau, Tableau→Power BI/SAC, and SQL Server→Azure.",
         icon: <TrendingUp size={40} className="icon-gold" />
     },
     {
