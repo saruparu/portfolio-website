@@ -7,7 +7,7 @@ const experiences = [
         role: "Senior Data and BI Manager",
         company: "King's Hawaiian",
         period: "2016 - Present",
-        description: "Led Microsoft Fabric migration, reducing costs by 30% while improving data processing efficiency",
+        description: "Pioneered enterprise-wide BI and Data Warehousing practice from inception. Transformed executive decision-making through strategic KPI frameworks and dashboards across MicroStrategy, Tableau, SAC, and Power BI. Architected end-to-end Data Governance and Quality methodologies, establishing trusted, high-integrity data foundations. Spearheaded AI initiatives including real-time Marketing Mix Modeling and Cash Flow Prediction. Led multiple enterprise migrations: Sage 500 ERP to SAP HANA, Data Warehouse repointing to SAP, MicroStrategy to Tableau, Tableau to Power BI/SAC, and SQL Server to Azure. Built and mentored a high-performing analytics team to sustain and scale these capabilities.",
         type: "work"
     },
     {
