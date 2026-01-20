@@ -200,7 +200,7 @@ const ChatWidget = () => {
 
                                 <div>
                                     <h3 className="text-white font-semibold text-sm">Ask Me Anything</h3>
-                                    <p className="text-blue-100 text-xs">About my professional experience</p>
+                                    <p className="text-blue-100 text-xs">About DG's professional experience</p>
                                 </div>
                             </div>
                             <button
@@ -247,16 +247,16 @@ const ChatWidget = () => {
                                         </svg>
                                     </div>
                                     <h4 className="text-gray-800 dark:text-white font-semibold mb-2">
-                                        Hi! I'm Saravana's AI Assistant
+                                        Hi! I'm DG's AI Assistant
                                     </h4>
                                     <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">
-                                        Ask me about his experience, skills, or achievements!
+                                        Ask me about DG's experience, skills, or achievements!
                                     </p>
                                     <div className="space-y-2">
                                         {[
-                                            'What is your experience?',
-                                            'What skills do you have?',
-                                            'Tell me about your achievements',
+                                            'What is DG\'s experience?',
+                                            'What skills does DG have?',
+                                            'Tell me about DG\'s achievements',
                                         ].map((suggestion) => (
                                             <button
                                                 key={suggestion}
@@ -363,7 +363,7 @@ const ChatWidget = () => {
                                 </button>
                             </div>
                             <p className="text-xs text-gray-400 text-center mt-2">
-                                Powered by AI • Responses are based on Saravana's resume
+                                Powered by AI • Responses are based on DG's resume
                             </p>
                         </div>
                     </motion.div>
