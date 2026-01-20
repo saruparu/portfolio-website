@@ -138,34 +138,49 @@ const ChatWidget = () => {
             {/* Chat Toggle Button */}
             <AnimatePresence>
                 {!isOpen && (
-                    <motion.button
+                    <motion.div
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0, opacity: 0 }}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => setIsOpen(true)}
-                        className="chat-widget-btn"
-                        aria-label="Open chat"
+                        className="chat-widget-container"
                     >
-                        {/* Chat icon */}
-                        <svg
-                            className="w-6 h-6 text-white"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
+                        {/* Floating Label */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.5 }}
+                            className="chat-widget-label"
                         >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                            />
-                        </svg>
+                            <span className="chat-widget-label-text">Ask DG's AI Assistant</span>
+                            <span className="chat-widget-label-arrow">→</span>
+                        </motion.div>
 
-                        {/* Pulse animation */}
-                        <span className="chat-btn-pulse" />
-                    </motion.button>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={() => setIsOpen(true)}
+                            className="chat-widget-btn"
+                            aria-label="Open chat"
+                        >
+                            {/* Chat icon */}
+                            <svg
+                                className="w-6 h-6 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                                />
+                            </svg>
+
+                            {/* Pulse animation */}
+                            <span className="chat-btn-pulse" />
+                        </motion.button>
+                    </motion.div>
                 )}
             </AnimatePresence>
 

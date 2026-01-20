@@ -762,11 +762,66 @@ ul {
 }
 
 /* Chatbot Widget */
-.chat-widget-btn {
+.chat-widget-container {
   position: fixed;
   bottom: 24px;
   right: 24px;
   z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-widget-label {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(139, 92, 246, 0.9));
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+  animation: labelGlow 2s ease-in-out infinite;
+  white-space: nowrap;
+}
+
+.chat-widget-label-text {
+  letter-spacing: 0.3px;
+}
+
+.chat-widget-label-arrow {
+  font-size: 1.1rem;
+  animation: arrowBounce 1s ease-in-out infinite;
+}
+
+@keyframes labelGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 4px 30px rgba(139, 92, 246, 0.6);
+  }
+}
+
+@keyframes arrowBounce {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.chat-widget-btn {
+  position: relative;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -778,6 +833,7 @@ ul {
   align-items: center;
   justify-content: center;
   transition: all var(--transition-normal);
+  flex-shrink: 0;
 }
 
 .chat-widget-btn:hover {
