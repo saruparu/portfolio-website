@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "portfolio-c5c4d"
-  }
+  },
+  "targets": {
+    "portfolio-c5c4d": {
+      "hosting": {
+        "main": [
+          "portfolio-c5c4d"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

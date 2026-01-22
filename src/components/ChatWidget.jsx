@@ -60,6 +60,13 @@ const ChatWidget = () => {
         }
     }, [isOpen]);
 
+    // Helper function to detect resume-related requests
+    const isResumeRequest = (text) => {
+        const lowerText = text.toLowerCase();
+        const triggerPhrases = ['resume', 'cv', 'profile', 'download'];
+        return triggerPhrases.some(phrase => lowerText.includes(phrase));
+    };
+
     // Handle sending a message
     const handleSend = async () => {
         const trimmedInput = inputValue.trim();
@@ -79,11 +86,13 @@ const ChatWidget = () => {
 
         // Create placeholder for assistant response
         const assistantId = generateId();
+        const shouldShowDownload = isResumeRequest(trimmedInput);
         const assistantMessage = {
             id: assistantId,
             role: 'assistant',
             content: '',
             timestamp: new Date(),
+            showDownload: shouldShowDownload,
         };
         setMessages((prev) => [...prev, assistantMessage]);
         setIsStreaming(true);
@@ -279,6 +288,7 @@ const ChatWidget = () => {
                                     role={msg.role}
                                     content={msg.content}
                                     isStreaming={isStreaming && index === messages.length - 1 && msg.role === 'assistant'}
+                                    showDownload={msg.showDownload}
                                 />
                             ))}
 
